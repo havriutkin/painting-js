@@ -25,7 +25,7 @@ canvas {
 
 #tools {
     border: 1px solid black;
-    height: 50vh;
+    height: 50vw;
     width: 25vw;
     margin: auto;
     display: flex;
@@ -35,9 +35,9 @@ canvas {
 }
 
 .tool {
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,6 +48,7 @@ input {
 }
 
 button {
+    font-family: monospace;
     background-color: rgb(25, 128, 236);
     border: none;
     color: white;
@@ -64,3 +65,4 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
