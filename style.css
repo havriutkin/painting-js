@@ -49,6 +49,7 @@ input {
 
 button {
     font-family: monospace;
+    width: 30%;
     background-color: rgb(25, 128, 236);
     border: none;
     color: white;

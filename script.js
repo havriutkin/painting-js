@@ -5,6 +5,7 @@ const instrumentTypeInput = document.getElementById('type');
 const sizeInput = document.getElementById('size');
 const colorPicker = document.getElementById('colorPicker')
 const clearButton = document.getElementById('clear');
+const saveButton = document.getElementById('save');
 
 // Set the canvas size explicitly in JavaScript
 canvas.width = canvas.clientWidth;
@@ -55,6 +56,17 @@ instrumentTypeInput.addEventListener('input', (event) => {
 colorPicker.addEventListener('change', (event) => {
     instrument.color = event.target.value;
 });
+
+saveButton.addEventListener('click', (event) => {
+    // Get canvas data
+    const dataURL = canvas.toDataURL('image/jpeg')
+
+    // Create a link to download picture
+    const link = document.createElement('a');
+    link.download = 'my_canvas_picture.png';
+    link.href = dataURL;
+    link.click();
+})
 
 
 // Drawing functionss
